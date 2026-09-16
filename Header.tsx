@@ -1,5 +1,6 @@
 import { Shield, Sun, Moon } from 'lucide-react';
-import { useTheme } from '@/lib/theme';
+
+import { useTheme } from './theme';
 
 export function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -10,17 +11,24 @@ export function Header() {
         <div className="flex items-center gap-2.5">
           <div className="relative">
             <div className="absolute inset-0 bg-blue-500 blur-lg opacity-30 rounded-full" />
-            <Shield className="relative w-7 h-7 text-blue-600 dark:text-blue-400" strokeWidth={2.5} />
+
+            <Shield
+              className="relative w-7 h-7 text-blue-600 dark:text-blue-400"
+              strokeWidth={2.5}
+            />
           </div>
+
           <div>
             <h1 className="text-base sm:text-lg font-bold tracking-tight leading-none">
               AI Scam Shield
             </h1>
+
             <p className="text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 leading-tight mt-0.5">
               Before You Pay, Ask AI
             </p>
           </div>
         </div>
+
         <button
           onClick={toggleTheme}
           className="p-2 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
