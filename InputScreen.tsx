@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react';
 import { Upload, MessageSquare, Link2, QrCode, Loader2, ShieldCheck } from 'lucide-react';
-import type { InputType } from '@/lib/types';
-import { extractTextFromImage } from '@/lib/ocr';
-import { decodeQRCode } from '@/lib/qr';
+import type { InputType } from './types';
+import { extractTextFromImage } from './ocr';
+import { decodeQRCode } from './qr';
 
 interface InputScreenProps {
   onAnalyze: (text: string, type: InputType) => void;
